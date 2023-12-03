@@ -1,0 +1,13 @@
+from flask import Flask
+
+# Create a Flask app
+app = Flask(__name__)
+
+# Define a route for the root URL
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    # Run the app on 0.0.0.0 (all available network interfaces) and port 80
+    app.run(debug=True, host='0.0.0.0', port=80)
